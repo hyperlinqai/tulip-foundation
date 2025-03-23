@@ -1,0 +1,174 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 217 33% 17%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 170 87% 31%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground pt-8; /* Add padding to account for notification bar */
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-soft;
+  }
+
+  .nav-item {
+    @apply relative px-3 py-2 text-sm font-medium transition-colors hover:text-tulip;
+  }
+
+  .nav-item::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-tulip transition-all duration-300;
+  }
+
+  .nav-item:hover::after {
+    @apply w-full;
+  }
+
+  .active-nav-item {
+    @apply text-tulip;
+  }
+
+  .active-nav-item::after {
+    @apply w-full;
+  }
+
+  .hero-text {
+    @apply opacity-0 animate-fade-in;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+  }
+
+  .hero-button {
+    @apply opacity-0 animate-fade-in;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
+  }
+
+  .staggered-item {
+    @apply opacity-0 animate-slide-up;
+    animation-fill-mode: forwards;
+  }
+
+  .staggered-item:nth-child(1) {
+    animation-delay: 100ms;
+  }
+
+  .staggered-item:nth-child(2) {
+    animation-delay: 200ms;
+  }
+
+  .staggered-item:nth-child(3) {
+    animation-delay: 300ms;
+  }
+
+  .staggered-item:nth-child(4) {
+    animation-delay: 400ms;
+  }
+
+  .page-transition-enter {
+    @apply opacity-0;
+  }
+
+  .page-transition-enter-active {
+    @apply opacity-100 transition-opacity duration-300;
+  }
+
+  .page-transition-exit {
+    @apply opacity-100;
+  }
+
+  .page-transition-exit-active {
+    @apply opacity-0 transition-opacity duration-300;
+  }
+
+  /* Style for the notification bar */
+  .notification-bar {
+    @apply fixed top-0 left-0 w-full z-[60] bg-tulip text-white py-2 text-center text-sm font-medium;
+    height: 2rem; /* Explicitly set height */
+  }
+  
+  /* Add this to ensure body has proper spacing */
+  body.has-notification-bar {
+    @apply pt-8; /* 2rem for notification bar */
+  }
+
+  /* Ensure all page containers have proper spacing */
+  .page-container {
+    @apply pt-24; /* notification + header height */
+  }
+  
+  /* Adjust hero sections */
+  .hero-section {
+    @apply pt-32; /* Increase padding-top */
+  }
+}

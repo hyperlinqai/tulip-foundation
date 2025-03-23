@@ -1,0 +1,17 @@
+NEW VOLUNTEER APPLICATION - TULIP KIDS FOUNDATION
+
+A new volunteer application has been submitted through the website:
+
+Name: {{firstName}} {{lastName}}
+Email: {{email}}
+Phone: {{phone}}
+
+Why they want to join:
+{{reason}}
+
+Please review this application and contact the applicant at your earliest convenience.
+
+---
+This is an automated message from the Tulip Kids Foundation website.
+For questions, contact info@tulipkidsinc.com or sneha@tulipkidsinc.com
+Phone: (408) 930-1862

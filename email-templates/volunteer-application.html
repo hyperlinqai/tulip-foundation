@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tulip Kids Foundation - Volunteer Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .header {
+      background-color: #f06292;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      border-radius: 5px 5px 0 0;
+    }
+    .content {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 5px 5px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+    .info-item {
+      margin-bottom: 10px;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>New Volunteer Application</h1>
+  </div>
+  <div class="content">
+    <p>A new volunteer application has been submitted through the website:</p>
+    
+    <div class="info-item">
+      <span class="label">Name:</span> {{firstName}} {{lastName}}
+    </div>
+    
+    <div class="info-item">
+      <span class="label">Email:</span> {{email}}
+    </div>
+    
+    <div class="info-item">
+      <span class="label">Phone:</span> {{phone}}
+    </div>
+    
+    <div class="info-item">
+      <span class="label">Why they want to join:</span>
+      <p>{{reason}}</p>
+    </div>
+    
+    <p>Please review this application and contact the applicant at your earliest convenience.</p>
+  </div>
+  <div class="footer">
+    <p>This is an automated message from the Tulip Kids Foundation website.</p>
+    <p>For questions, contact <a href="mailto:info@tulipkidsinc.com">info@tulipkidsinc.com</a> or <a href="mailto:sneha@tulipkidsinc.com">sneha@tulipkidsinc.com</a></p>
+    <p>Phone: (408) 930-1862</p>
+  </div>
+</body>
+</html>
